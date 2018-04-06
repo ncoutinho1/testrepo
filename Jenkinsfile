@@ -17,7 +17,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'docker build -t lamp_image .'
+                sh 'docker build -t lamp_image ."
             }
         }
         stage('Test') {
