@@ -11,18 +11,17 @@ pipeline {
     stages {
         stage('Clean') {
             steps {
-                sh 'docker stop $(docker ps -q --filter ancestor=lamp_image)'
-                sh 'docker rm -f $(docker ps -q --filter ancestor=lamp_image)'
+                sh 'echo Clean step'
             }
         }
         stage('Build') {
             steps {
-                sh 'docker build -t lamp_image .'
+                sh 'echo Build step'
             }
         }
         stage('Test') {
             steps {
-                sh 'docker run -d -p 80:80 -p 3306:3306 lamp_image'
+                sh 'echo Test step'
             }
         }
     }
