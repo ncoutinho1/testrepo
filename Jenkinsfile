@@ -17,12 +17,12 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'docker build -t lamp_image ."
+                sh 'docker build -t lamp_image .'
             }
         }
         stage('Test') {
             steps {
-                sh 'docker run -d -p 80:80 -p 3306:3306 lamp_image"
+                sh 'docker run -d -p 80:80 -p 3306:3306 lamp_image'
             }
         }
     }
