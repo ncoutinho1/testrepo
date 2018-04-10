@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Clean') {
             steps {
-                sh 'echo Clean step'
+                sh 'echo Clean step"
             }
         }
         stage('Build') {
